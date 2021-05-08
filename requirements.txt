@@ -1,0 +1,13 @@
+# local package install
+-e .
+
+# third party packages
+# dvc
+# dvc[gdrive]
+sklearn
+numpy
+pandas
+mlflow
+matplotlib
+plotly
+dash

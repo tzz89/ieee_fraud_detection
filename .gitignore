@@ -1,0 +1,27 @@
+# Unit test / coverage reports
+htmlcov/
+.tox/
+
+# Pycharm
+.idea
+
+# jupyter notebooks will not be merged only #%% will be kept
+.ipynb
+.ipynb_checkpoints/
+
+#data files DVC
+data/*/*
+!data/*/*.dvc
+
+#artifacts will be tracked by DVC/MLFLOW
+model_artifacts/*
+!model_artifacts/*.dvc
+
+#stage artifacts will be tracked by DVC/MLFLOW
+stage_artifacts/*
+!stage_artifacts/*.dvc
+
+
+#production will be tracked by DVC/MLFLOW
+src/production_artifacts/*
+!src/production_artifacts/*.dvc
