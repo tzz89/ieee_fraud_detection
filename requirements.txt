@@ -11,3 +11,6 @@ mlflow
 matplotlib
 plotly
 dash
+notebook
+jupyterlab
+atoti
