@@ -6,6 +6,25 @@ from sklearn.base import BaseEstimator, TransformerMixin
 class DataMemoryReducer(BaseEstimator, TransformerMixin):
     '''
     This module attempts to reduce 64 bit datatypes to 32 bit during EDA with pandas so it will fit memory. It will also save the schema to given location
+
+
+    sample usage
+    >> train_transaction.info()
+    >> <class 'pandas.core.frame.DataFrame'>
+        RangeIndex: 590540 entries, 0 to 590539
+        Columns: 394 entries, TransactionID to V339
+        dtypes: float64(376), int64(4), object(14)
+        memory usage: 1.7+ GB
+
+    >> data_memory_reducer = DataMemoryReducer()
+       reduced_df = data_memory_reducer.fit_transform(train_transaction)
+
+    >> reduced_df.info()
+       <class 'pandas.core.frame.DataFrame'>
+       RangeIndex: 590540 entries, 0 to 590539
+       Columns: 394 entries, TransactionID to V339
+       dtypes: float32(376), int32(4), object(14)
+       memory usage: 919.1+ MB
     '''
 
     def __init__(self):

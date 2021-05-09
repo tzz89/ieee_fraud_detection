@@ -4,6 +4,7 @@
 # third party packages
 # dvc
 # dvc[gdrive]
+autopep8
 sklearn
 numpy
 pandas
@@ -13,4 +14,4 @@ plotly
 dash
 notebook
 jupyterlab
-atoti
+atoti-jupyterlab
